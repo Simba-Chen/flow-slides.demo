@@ -18,19 +18,19 @@
 .images>img{
     position: absolute;
     top: 0;
-    transition: all 1s;
+    transition: all 3s;
 }
 .current{
-    left: 0;
+    /* left: 0; */
     z-index: 1;  
-    /* transform: translateX(0); */
+    transform: translateX(0);
 }
 .left{
-    left: -100%;
+    /* left: -100%; */
     z-index: 1; 
     /* transform: translateX(-100%); */
 }
 .right{
-    left: 100%;
-    /* transform: translateX(100%); */
+    /* left: 100%; */
+    transform: translateX(100%);
 }
