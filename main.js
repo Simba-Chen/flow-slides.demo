@@ -1,20 +1,18 @@
-
 let n
 init()
+
 setInterval(function (){
     $(`.images>img:nth-child(${num(n)})`).addClass('left').removeClass('current')
     .one('transitionend',function (message){
         $(message.currentTarget).removeClass('left').addClass('right')
     })
     $(`.images>img:nth-child(${num(n+1)})`).addClass('current').removeClass('right')
-    n++
-    console.log('n的值'+ num(n))
-    console.log('n+1的值'+ num(n+1))
+    n = n+1
 },3000)
 function init(){
     n = 1
     $(`.images>img:nth-child(${n})`).addClass('current')
-        .siblings().addClass('enter')
+        .siblings().addClass('right')
 }
 function num(n){
     if(n>6){
