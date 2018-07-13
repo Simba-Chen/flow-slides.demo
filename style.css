@@ -28,7 +28,7 @@
 .left{
     /* left: -100%; */
     z-index: 1; 
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
 }
 .right{
     /* left: 100%; */
