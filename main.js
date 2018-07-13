@@ -2,11 +2,11 @@ let n
 init()
 
 setInterval(function (){
-    $(`.images>img:nth-child(${num(n)})`).addClass('left').removeClass('current')
+    $(`.images>img:nth-child(${num(n)})`).addClass('left').removeClass('current right')
     .one('transitionend',function (message){
-        $(message.currentTarget).removeClass('left').addClass('right')
+        $(message.currentTarget).addClass('right').removeClass('left current')
     })
-    $(`.images>img:nth-child(${num(n+1)})`).addClass('current').removeClass('right')
+    $(`.images>img:nth-child(${num(n+1)})`).addClass('current').removeClass('right left')
     n = n+1
 },3000)
 function init(){
